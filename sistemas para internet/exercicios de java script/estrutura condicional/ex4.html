@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+    <div>
+        <h1>AUMENTO DE SALARIO </h1>
+        <p>por favor entre com o seu salario atual </p>
+        <p><input type="number" name="num" id="num"></p>
+        <p><button onclick="verificar()">verificar</button></p>
+        <p id="result">o valor do aumento é: </p>
+        <p id="result2">o novo salario é:</p>
+        <script>
+            function verificar() {
+                var salarioAtual, aumento, novoSalario;
+                salarioAtual = document.getElementById("num").value;
+                salarioAtual= Number (salarioAtual);
+                if (salarioAtual <= 1700) {
+                    aumento = salarioAtual * 0.12;
+                    novoSalario = salarioAtual + aumento;
+                } else if (salarioAtual > 1700 && salarioAtual <= 2500) {
+                    aumento = salarioAtual * 0.08;
+                    novoSalario = salarioAtual + aumento;
+                } else if (salarioAtual > 2500 && salarioAtual <= 3000) {
+                    aumento = salarioAtual * 0.05;
+                    novoSalario = salarioAtual + aumento;
+                } else {
+                    aumento = 0;
+                    novoSalario = salarioAtual;
+                }
+                document.getElementById("result").innerHTML="valor do aumento:"+ aumento;
+                
+                document.getElementById("result2").innerHTML="novo salario:"+novoSalario;
+
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1>media aritimetica</h1>
+        <p>primeira nota <input type="text" name="num1" id="num1" value="" placeholder="informe um numero"></p>
+        <p>segunda nota <input type="text" name="num2" id="num2" value="" placeholder="informe outro numero"></p>
+        <p>terceira nota <input type="text" name="num3" id="num3" value="" placeholder="informe outro numero"></p>
+        <p>quarta nota <input type="text" name="num4" id="num4" value="" placeholder="informe outro numero"></p>
+        <p><input type="button" onclick="media()" value="calcular"></p>
+        <p id="result">o resultado aqui</p>
+        <script>
+           
+            function media() {
+                var numero1, numero2, numero3,numero4,media;
+                numero1 = document.getElementById("num1").value;
+                numero2 = document.getElementById("num2").value;
+                numero3 = document.getElementById("num3").value;
+                numero4 = document.getElementById("num4").value;
+                numero1 = Number(numero1);
+                numero2 = Number(numero2);
+                numero3= Number(numero3);
+                numero4 = Number(numero4);
+                media = (numero1 + numero2+ numero3+numero4)/4
+                document.getElementById("result").innerHTML = media
+
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

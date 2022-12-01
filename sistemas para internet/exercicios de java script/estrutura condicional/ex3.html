@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+<body>
+    <div>
+        <h1>validação de dados de entrada </h1>
+        <p>por favor entre com um numero entre 1 e 50 </p>
+        <p><input type="number" name="num" id="num"></p>
+        <p><button onclick="verificar()">verificar</button></p>
+        <p id="result">o resultado aqui </p>
+        <script>
+            function verificar(){
+                var num;
+                num= document.getElementById("num").value;
+                if(num>=1 && num <=50){
+                   
+                    document.getElementById("result").innerHTML="entrada valida";
+                }
+                else{
+                    document.getElementById("result").innerHTML="entrada invalida";
+                }
+
+            }
+        
+        </script>
+    </div>
+</body>
+</html>
