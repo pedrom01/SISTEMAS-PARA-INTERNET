@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6</title>
+</head>
+
+<div>
+    <h1>Ex6</h1>
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+
+
+    <script>
+        var quantAlunos = 0;
+        var nota = 0;
+        var soma = 0;
+        var media = 0;
+        var acima7 = 0;
+        var maiornota = 0;
+        var menornota = 99;
+        var percentual = 0;
+        var alunos = 0;
+        while (nota !== -1) {
+            nota = parseInt(prompt("Entre com um número: "));
+            if (nota == -1) {
+                break
+            }
+            quantAlunos = quantAlunos + 1
+            soma += nota
+
+            if (nota > 7) {
+                acima7 = acima7 + 1
+            }
+            if (nota > maiornota) {
+                maiornota = nota;
+            }
+            if (nota < menornota) {
+                menornota = nota;
+            }
+            (nota > 5 && nota <= 7) 
+                alunos += nota
+                percentual = (100 * nota) / alunos;
+        }
+
+        media = (soma) / quantAlunos
+        document.getElementById("result").innerHTML = "A média da é " + media;
+        document.getElementById("result1").innerHTML = "Alunos com média acima de 7: " + acima7;
+        document.getElementById("result2").innerHTML = "A maior nota foi: " + maiornota;
+        document.getElementById("result3").innerHTML = "A menor nota foi: " + menornota;
+        document.getElementById("result4").innerHTML = "Alunos com nota maior que 5 e menor igual a 7: " + percentual +"%";
+
+    </script>
+</div>
+
+</html>

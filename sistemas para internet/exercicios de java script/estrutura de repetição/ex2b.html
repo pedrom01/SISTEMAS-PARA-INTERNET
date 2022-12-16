@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2 b)</title>
+    <style>
+        table {
+            border: 2px solid red;
+        }
+
+        th {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Exibição de números ímpares, sua soma e média aritmética</h1>
+        <p>Entre com um número: <input type="number" name="num" id="num"></p>
+        <p><button onclick="calcular()">Verificar</button></p>
+        <p id="result"></p>
+        <p id="result1"></p>
+        <p id="result2"></p>
+
+        <script>
+            function calcular() {
+                var num;
+                var impares = "<table>";
+                var soma = 0;
+                var media = 0;
+                var contador = 0;
+                num = Number(document.getElementById("num").value);
+                for (var i = 1; i <= num; i += 2) {
+                    contador = contador + 1
+                    soma += i
+                    if (contador == 5) {
+                        impares += '<tr><th><img src="https://upload.wikimedia.org/wikipedia/pt/thumb/e/e6/The_Simpsons_promo.png/229px-The_Simpsons_promo.png"/></th></tr>'
+
+                    }
+                    else {
+                        impares += "<tr><th>" + i+ "</th></tr>"
+                    }
+
+                }
+                impares += "</table>";
+                media = soma / contador
+                document.getElementById("result").innerHTML = impares;
+                document.getElementById("result1").innerHTML = "A soma é " + soma;
+                document.getElementById("result2").innerHTML = "A média é " + media;
+            }
+
+        </script>
+    </div>
+
+</body>
+
+</html>
