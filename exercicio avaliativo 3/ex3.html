@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ex3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>
+        <h3>Fornecedor</h3>
+    </div>
+    <script>
+
+        class fornecedor {
+            constructor(nomeFornecedor, rua, numeroEndereco, bairro, cidade, estado, CEP, email, CNPJ, dataAberturaEmpresa) {
+                this.nome = nomeFornecedor;
+                this.rua = rua;
+                this.numero = numeroEndereco;
+                this.bairro = bairro;
+                this.cidade = cidade;
+                this.estado = estado;
+                this.cep = CEP;
+                this.email = email;
+                this.cnpj = CNPJ;
+                this.data = dataAberturaEmpresa;
+            }
+            mostraDados = function () {
+                return "nome do fornecedor: " + this.nome + "<br>"+" rua: " + this.rua + "<br>"+"  numero do estabelecimento: " +"<br>"+ this.numero + "<br>"+" bairro: " + this.bairro +"<br>"+ " cidade: " + this.cidade +"<br>"+ " estado: " + this.estado + "<br>"+" CEP: " + this.cep + "<br>"+" email: " + this.email +"<br>"+ " CNPJ: " + this.cnpj+"<br>"+ " data abertura da empresa: " + this.data;
+            }
+        };
+
+        var forn = new fornecedor("Chico parafuso", "Rua dos milagres", 5,"jardim caiçara", "cabo frio", "Rj", 898520254478, "chicoparafuso@gmail.com", 578941236589, "20-10-2002");
+        document.write(forn.mostraDados());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+
+<body>
+    <h2>avaliação</h2>
+    <p>nome: <br><input style="margin:5px;" type="text" id="nome" name="nome" placeholder="nome completo"><br>
+        sexo:
+    <div>
+        <input type="radio" id="sexo" name="masculino" value="masculino">
+        <label for="masculino">masculino</label>
+    </div>
+    <div>
+        <input type="radio" id="sexo" name="feminino" value="feminino">
+        <label for="feminino">feminino</label>
+    </div>
+    email:<br><input style="margin:5px;" type="text" id="email" name="email" placeholder=" seu email"><br>
+    cep:<br><input style="margin:5px;" type="number" id="cep" name="cep" placeholder="cep "><br>
+    endereço residencial: <br><input style="margin:5px;" type="text" id="endereco" name="endereco"
+        placeholder="informe o seu endereço residencial"><br>
+    bairro:<br><input style="margin:5px;" type="text" id="bairro" name="bairro" placeholder=" bairro"><br>
+    numero:<br><input style="margin:5px;" type="number" id="numero" name="numero"
+        placeholder="numero da sua residencia"><br>
+    cidade:<br><input style="margin:5px;" type="text" id="cidade" name="cidade" placeholder="cidade "><br>
+    estado:<br> <select id="estado" name="estado" onchange="estadosbr()">
+        <option value="">Selecione</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espirito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+    </select>
+    </p>
+    <button onclick="dadosPessoais()" >enviar</button>
+    <p>informações: <span id="result"></span> </p>
+    <script>
+        function dadosPessoais() {
+            var nome = document.getElementById("nome").value;
+            var sexo = document.getElementById("sexo").value;
+            var email = document.getElementById("email").value;
+            var cep = document.getElementById("cep").value;
+            var endereco = document.getElementById("endereco").value;
+            var bairro = document.getElementById("bairro").value;
+            var numero = document.getElementById("numero").value;
+            var cidade = document.getElementById("cidade").value;
+            var estado = document.getElementById('estado').value;
+            var resultado = ("<br>" + "Nome" + nome + "<br>" + " residente no endereço: " + endereco + ",  " + numero + ",  " + cep + ",  " + bairro + ",  " + cidade + "  " + estado + " <br> " + "sexo: " + sexo);
+            document.getElementById("result").innerHTML = resultado;
+        }
+        function estadosbr() {
+            document.getElementById('estado').value;
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>

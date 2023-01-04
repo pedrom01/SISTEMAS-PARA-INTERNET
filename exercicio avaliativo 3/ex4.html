@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ex4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>
+        <h3>futebol</h3>
+    </div>
+    <script>
+
+        class time {
+            constructor(nomeUsuario,timebr, timegringo, selecao) {
+                this.nome = nomeUsuario;
+                this.timebr = timebr;
+                this.timegringo = timegringo;
+                this.selecao = selecao;
+            }
+            dados = function () {
+                return "nome: " + this.nome + "<br>"+" time brasileiro: " + this.timebr + "<br>"+"  time gringo: "+ this.timegringo + "<br>"+" seleção: " + this.selecao;
+            }
+        };
+
+        var futebol = new time("diego", "vasco","real madrid", "jamaica");
+        document.write(futebol.dados());
+    </script>
+</body>
+
+</html>

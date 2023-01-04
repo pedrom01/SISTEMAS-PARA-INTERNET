@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ex5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>
+        <h3>maior e menor</h3>
+    </div>
+    <script>
+        n=Number(prompt("quantos elementos:"));
+        vetor= Array(n);
+        for (i=0; i<n; i++){
+            vetor[i]=Number(prompt("elemento:"))
+        } 
+         posMaior=0
+         for (i=1; i<n; i++){
+           if  (vetor[i]> vetor[posMaior]){
+            posMaior= i
+           }
+            } 
+              document.write("<br /> posição: " + posMaior + " valor contido na posição: " + vetor[posMaior]);
+
+
+
+    </script>
+</body>
+
+</html>
